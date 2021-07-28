@@ -52,10 +52,10 @@ const StackContainer = styled.div`
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 15px 10px;
+    padding: 15px 0px;
     .title {
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 2vw;
         padding-bottom: 5px;
     }
     .stack_wrapper {
@@ -63,6 +63,9 @@ const StackContainer = styled.div`
         width: fit-content;
         grid-template-columns: repeat(4, minmax(auto, 25%));
         grid-gap: 10px;
+        @media (min-width: 0px) and (max-width: 768px) {
+            grid-template-columns: repeat(3, minmax(auto, 33.333%));
+        }
     }
 `
 const ImageContainer = styled.div`
@@ -89,11 +92,11 @@ export default function Banner1() {
                     <StackContainer>
                         <p class="title"> FrontEnd </p>
                         <div class="stack_wrapper">
-                            <StackCard />
-                            <StackCard />
-                            <StackCard />
-                            <StackCard />
-                            <StackCard />
+                            <StackCard image={react} name={"React"}/>
+                            <StackCard image={html} name={"HTML"}/>
+                            <StackCard image={css} name={"CSS"}/>
+                            <StackCard image={js} name={"Java Script"} />
+                            <StackCard image={redux} name={"Redux"}/>
                         </div>
                     </StackContainer>
                     <StackContainer>

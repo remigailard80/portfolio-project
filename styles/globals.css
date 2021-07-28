@@ -15,10 +15,10 @@ html {
       font-size: 14px;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 3vw;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
   }
 }
 @media (min-width: 768px) and (max-width: 1023.99px) {
@@ -26,10 +26,10 @@ html {
       font-size: 14px;
   }
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.5vw;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2vw;
   }
 }
 html,
@@ -55,8 +55,8 @@ input, form, button, h1, h2, h3, h4, p {
   padding: 0;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 4vw;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.5vw;
 }
