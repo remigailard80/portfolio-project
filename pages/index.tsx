@@ -1,7 +1,8 @@
-import Banner1 from 'containers/Home/Banner1';
+import HomeContainer from 'containers/Home/HomeContainer';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
   return (
-    <Banner1 />
+    <HomeContainer />
   )
 }

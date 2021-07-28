@@ -3,34 +3,22 @@ import SliderBannerProps from 'interfaces/Slider';
 
 const Banner = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 99.9vh;
     background-color: ${props => props.backgroundColor ? props.backgroundColor : 'white'};
-    position: relative;
-    .subSlider {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: ${props => props.subColor ? props.subColor : 'black'};
-    }
+    position: absolute;
+    z-index: ${props => 100 - props.page};
+    transition: ease 1s;
+    overflow-y: auto;
+    transform: translate3d(0px, 0px, 0px);
 ` 
-export default function SliderBanner({backgroundColor, type, direction, subColor, move, id}: SliderBannerProps) {
-    if (type == 0) {
-        return (
-            <Banner
-                className="SliderBanner"
-                backgroundColor={backgroundColor}
-            />
-        )
-    } else {
-        return (
-            <Banner className="SliderBanner" backgroundColor={backgroundColor}>
-                <div 
-                    className="subSlider"
-                    onScroll={(e) => console.log(e)}
-                >
-                </div>
-            </Banner>
-        )
-    }
-    
+export default function SliderBanner({backgroundColor, direction, move, id, page, children}: SliderBannerProps) {
+    return (
+        <Banner
+            backgroundColor={backgroundColor}
+            page={page}
+            className="SliderBanner"
+        >
+            {children}
+        </Banner>
+    )
 } 
