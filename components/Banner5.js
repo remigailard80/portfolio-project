@@ -46,10 +46,14 @@ export default function Banner5(props) {
             'title': '주소지',
             'desc': '경기도 성남시'
         },
-        
         {
             'title': '생년월일',
             'desc': '96.11.16'
+        },
+        {
+            'title': 'GITHUB',
+            'desc': 'https://github.com/remigailard80',
+            'url': 'https://github.com/remigailard80'
         }
     ];
 
@@ -65,7 +69,13 @@ export default function Banner5(props) {
                                     <>
                                         <section>
                                             <h2> {item.title} </h2>
-                                            <p> {item.desc} </p> 
+                                            {item.url ? (
+                                                <a href={item.url}>
+                                                    <p style={{color: 'blue'}}> {item.desc} </p>
+                                                </a>
+                                            ):(
+                                                <p> {item.desc} </p>
+                                            )} 
                                         </section>
                                     </>
                                 )

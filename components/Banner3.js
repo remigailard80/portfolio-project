@@ -16,7 +16,7 @@ const js = '/images/logo/JS.svg';
 const nextjs = '/images/logo/nextjs.svg';
 const postgresql = '/images/logo/postgresql.svg';
 const react = '/images/logo/React.svg';
-const redux = '/images/logo/Redux.svg';
+const redux = '/images/logo/redux.svg';
 const github = '/images/logo/GITHUB.svg';
 
 const Wrapper = styled.div`
