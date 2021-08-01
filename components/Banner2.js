@@ -7,12 +7,24 @@ const Wrapper = styled.div`
     height: 100%;
     display: flex;
     flex-direction: row;
+    @media (min-width: 0px) and (max-width: 767.99px) {
+        flex-direction: column;
+    }
     .side_container {
         box-sizing: border-box;
         padding-top: 8vh;
         padding-right: 3vw;
         .strong {
             color: rgba(152,0,0,1);
+        }
+        @media (min-width: 0px) and (max-width: 767.99px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 0;
+            padding-right: 0;
+            padding-bottom: 2vh;
         }
     }
     .text_wrapper {
@@ -45,6 +57,9 @@ const Wrapper = styled.div`
                 min-height: 10vh;
                 .sub_title {
                     margin-bottom: 5px;
+                    @media (min-width: 0px) and (max-width: 767.99px) {
+                        text-align: center;
+                    }
                 }
                 > p {
                     box-sizing: border-box;
@@ -54,6 +69,7 @@ const Wrapper = styled.div`
                     @media (min-width: 0px) and (max-width: 767.99px) {
                         font-size: 0.5vw;
                         word-break: initial;
+                        margin: 0 auto;
                     }
                 }
             }
