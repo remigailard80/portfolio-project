@@ -168,7 +168,7 @@ export default function Banner3(props) {
                                             </div>
                                             <div className="right_container">
                                                 <a href={item.url != null && item.url} onClick={() => item.url == null && alert('준비중입니다.')}>
-                                                    <img src={item.thumbnail} alt={item.thumbnail}/>
+                                                    <img src={item.thumbnail} alt={item.title}/>
                                                 </a>
                                             </div>
                                         </div>
