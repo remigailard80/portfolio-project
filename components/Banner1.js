@@ -147,7 +147,7 @@ export default function Banner1(props) {
                 <Container>
                     <section>
                         <h1> FrontEnd Developer; </h1>
-                        <h2> <span class="line"> 김민석 </span> 입니다. </h2>
+                        <h2> <span className="line"> 김민석 </span> 입니다. </h2>
                         <StackContainer style={{animation: 'fadeinMid 3s'}}>
                             <h3> 
                                 2020년 3월, 한 스타트업의 영업 인턴으로 시작하여, <br/>

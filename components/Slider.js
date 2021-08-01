@@ -65,9 +65,9 @@ export const Slider = ({children, ...props}) => {
     return (
         <SliderWrapper>
             <SliderArrow>
-                <span class="left_arrow" onClick={slideLeft}> ← </span>
-                <span class="page_container"> {page+1} / {children.length} </span>
-                <span class="right_arrow" onClick={slideRight}> → </span>
+                <span className="left_arrow" onClick={slideLeft}> ← </span>
+                <span className="page_container"> {page+1} / {children.length} </span>
+                <span className="right_arrow" onClick={slideRight}> → </span>
             </SliderArrow>
             {children.map((item, idx) => {
                 return (

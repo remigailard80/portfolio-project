@@ -155,21 +155,21 @@ export default function Banner3(props) {
                             return (
                                 <>
                                     <Item>
-                                        <div class="header">
-                                            <div class="left_container">
+                                        <div className="header">
+                                            <div className="left_container">
                                                 <h2> {item.title} </h2>
                                                 <h3> {item.date} </h3> 
-                                                <div class="stack_container">
+                                                <div className="stack_container">
                                                     {item.tags.map((item, idx) => <StackCard image={item[0]} name={item[1]} />)}
                                                 </div>
                                             </div>
-                                            <div class="right_container">
+                                            <div className="right_container">
                                                 <a href={item.url != null && item.url} onClick={() => item.url == null && alert('준비중입니다.')}>
                                                     <img src={item.thumbnail} alt={item.thumbnail}/>
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="desc">
+                                        <div className="desc">
                                             <p> {item.desc} </p>
                                         </div>
                                     </Item>

@@ -123,18 +123,18 @@ export default function Banner4(props) {
                 <Wrapper>
                     <h1> Skills </h1>
                     <SkillContainer>
-                        <div class="left_container">
+                        <div className="left_container">
                             <ImageWrapper>
                                 <img src={nyang} />
-                                <SubImage class="sub_image" src={js} top={'30%'} left={'20%'} />
-                                <SubImage class="sub_image" src={html} top={'60%'} left={'30%'} />
-                                <SubImage class="sub_image" src={react} top={'30%'} right={'20%'} />
-                                <SubImage class="sub_image" src={github} top={'60%'} right={'30%'} />
+                                <SubImage className="sub_image" src={js} top={'30%'} left={'20%'} />
+                                <SubImage className="sub_image" src={html} top={'60%'} left={'30%'} />
+                                <SubImage className="sub_image" src={react} top={'30%'} right={'20%'} />
+                                <SubImage className="sub_image" src={github} top={'60%'} right={'30%'} />
                             </ImageWrapper>
                         </div>
-                        <div class="right_container">
+                        <div className="right_container">
                             <h2> 저는 React.JS를 이용한 개발에 가장 자신이 있습니다. </h2>
-                            <p class="tagbox">
+                            <p className="tagbox">
                                 #React.js 
                                 #Redux
                                 #Hooks
@@ -152,24 +152,24 @@ export default function Banner4(props) {
                                 #Postgresql
                                 #Postgresql
                             </p>
-                            <div class="stack_box">
-                                <div class="item">
+                            <div className="stack_box">
+                                <div className="item">
                                     <h3> React.JS - 80% </h3>
                                     <ProgressBar percent={'80%'}/>
                                 </div>
-                                <div class="item">
+                                <div className="item">
                                     <h3> JavaScript(ECMA6) - 70% </h3>
                                     <ProgressBar percent={'70%'}/>
                                 </div>
-                                <div class="item">
+                                <div className="item">
                                     <h3> HTML5, CSS3 - 70% </h3>
                                     <ProgressBar percent={'70%'}/>
                                 </div>
-                                <div class="item">
+                                <div className="item">
                                     <h3> Github - 60% </h3>
                                     <ProgressBar percent={'60%'}/>
                                 </div>
-                                <div class="item">
+                                <div className="item">
                                     <h3> Django - 60% </h3>
                                     <ProgressBar percent={'60%'}/>
                                 </div>

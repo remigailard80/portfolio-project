@@ -11,13 +11,13 @@ const Banner = styled.div`
     overflow-y: auto;
     transform: translate3d(0px, 0px, 0px);
 ` 
-export default function SliderBanner({backgroundColor, direction, move, id, page, theme, innerRef, children}: SliderBannerProps) {
+export default function SliderBanner({backgroundColor, page, theme, innerRef, children}) {
     return (
         <>
             <Banner
                 backgroundColor={backgroundColor}
                 page={page}
-                className="SliderBanner"
+                classNameName="SliderBanner"
                 theme={theme}
                 ref={innerRef}
             >

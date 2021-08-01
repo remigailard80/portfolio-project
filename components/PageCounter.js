@@ -43,7 +43,7 @@ export const PageCounter = (props) => {
     return (
         <>
             <Wrapper>
-                <div class="text_container">
+                <div className="text_container">
                     <p> All Right Reserved. 2021 </p>
                     <p> remigailard80@naver.com </p>
                 </div>

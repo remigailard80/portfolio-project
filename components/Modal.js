@@ -83,7 +83,7 @@ export const Modal = (props) => {
     if (props.active) {
         return (
             <ModalWrapper>
-                <img class="close_btn" src={Xbutton} alt="X" onClick={onClose}/>
+                <img className="close_btn" src={Xbutton} alt="X" onClick={onClose}/>
                 <ModalContainer>
                     <ModalItem onClick={() => pageJump(0)} fade={'1s'}> 
                         <h2> Home </h2>

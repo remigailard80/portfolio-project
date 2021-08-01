@@ -48,7 +48,7 @@ export const Navbar = (props) => {
     return (
         <>
             <NavbarWrapper id="top__navbar">
-                <div class="navbar__left">
+                <div className="navbar__left">
                     {!isMobile && (
                         <Navcell>
                             <h4> remigailard80 </h4>
@@ -58,7 +58,7 @@ export const Navbar = (props) => {
                         <h4> +82 010-7461-6005 / remigailard80@naver.com </h4>
                     </Navcell>
                 </div>
-                <div class="navbar__right">
+                <div className="navbar__right">
                     <HamburgerMenu onClick={() => setModal(!modal)}/>
                 </div>
             </NavbarWrapper>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react-responsive": "^8.0.3",
+    "@types/styled-components": "^5.1.11",
     "babel": "^6.23.0",
     "babel-plugin-styled-components": "^1.13.1",
     "next": "11.0.1",

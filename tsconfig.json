@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "baseUrl": ".",
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Banner5.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Banner5.js", "components/SlideBanner.js", "containers/Home/HomeContainer.js"],
   "exclude": ["node_modules"]
 }
