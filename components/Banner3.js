@@ -3,9 +3,9 @@ import BannerTemplate from 'components/BannerTemplate';
 import Slider from 'components/Slider';
 import StackCard from 'components/StackCard';
 
-const BNN = 'images/components/Banner3/BNN.png';
-const BLOG = 'images/components/Banner3/blog.png';
-const DEFAULT = 'images/components/Banner3/alertImg.jpg';
+const BNN = '/images/components/Banner3/BNN.png';
+const BLOG = '/images/components/Banner3/blog.png';
+const DEFAULT = '/images/components/Banner3/alertImg.jpg';
 
 // stacks
 const aws = '/images/logo/AWS.svg';
@@ -25,17 +25,17 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     color: var(--resColor);
-    overflow: scroll;
+    overflow-y: scroll;
 `
 const Item = styled.section`
     width: 100%;
-    height: fit-content;
+    height: 100%;
     box-sizing: border-box;
     padding: 2% 2%;
     animation: fadein 2s;
     .header {
         width: 100%;
-        height: fit-content;
+        height: 80%;
         display: inline-flex;
         justify-content: space-between;
         .left_container {
@@ -46,6 +46,7 @@ const Item = styled.section`
         }
         .right_container {
             width: 50%;
+            height: 100%;
             a {
                 width: 100%;
                 height: 100%;
@@ -56,7 +57,6 @@ const Item = styled.section`
                 > img {
                     width: 100%;
                     height: 100%;
-                    max-height: 40vh;
                     border-radius: 10px;
                     object-fit: cover;
                     transition: 0.5s;
@@ -68,7 +68,7 @@ const Item = styled.section`
         }
         .stack_container {
             box-sizing: border-box;
-            padding: 2% 0px;
+            margin-top: 2%;
             display: grid;
             width: 90%;
             grid-template-columns: repeat(5, minmax(50px, 1fr));

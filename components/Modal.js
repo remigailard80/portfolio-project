@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { useEffect } from 'react';
 
-const Xbutton = 'images/components/Modal/cross-icon.svg';
+const Xbutton = '/images/components/Modal/cross-icon.svg';
 
 const ModalFadeIn = keyframes`
     0% {

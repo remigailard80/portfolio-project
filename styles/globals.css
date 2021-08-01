@@ -55,6 +55,18 @@
 html {
   font-size: 14px;
 }
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  height: 17%;
+  background-color: #999;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 10px;
+}
 @media (min-width: 0px) and (max-width: 767.99px) {
   html {
       font-size: 14px;
