@@ -3,29 +3,22 @@ import StackCard from 'components/StackCard';
 import { useEffect, useState } from 'react';
 
 const nyang = '/images/nyang.png';
-// stacks
-const aws = '/images/logo/AWS.svg';
-const css = '/images/logo/CSS.svg';
-const django = '/images/logo/Django.svg';
-const html = '/images/logo/HTML.svg';
-const js = '/images/logo/JS.svg';
-const mysql = '/images/logo/mysql.svg';
-const postgresql = '/images/logo/postgresql.svg';
-const react = '/images/logo/React.svg';
-const redux = '/images/logo/Redux.svg';
 
 const Wrapper = styled.div`
     color: white;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 const Container = styled.div`
     width: 80%;
-    height: 50%;
+    height: auto;
+    min-height: 50%;
     max-width: 1200px;
     display: inline-flex;
-    margin: auto;
     @media (min-width: 0px) and (max-width: 767.99px) {
         max-width: 720px;
     }
@@ -153,7 +146,7 @@ export default function Banner1(props) {
             <Wrapper>
                 <Container>
                     <section>
-                        <h1> FrontEnd Developer. </h1>
+                        <h1> FrontEnd Developer; </h1>
                         <h2> <span class="line"> 김민석 </span> 입니다. </h2>
                         <StackContainer style={{animation: 'fadeinMid 3s'}}>
                             <h3> 

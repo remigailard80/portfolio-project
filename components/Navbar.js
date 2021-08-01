@@ -14,6 +14,7 @@ const NavbarWrapper = styled.nav`
     z-index: 100;
     display: inline-flex;
     justify-content: space-between;
+    background-color: var(--navColor);
     .navbar__left {
         display: inline-flex;
         width: 70%;
@@ -25,6 +26,10 @@ const NavbarWrapper = styled.nav`
     .navbar__right {
 
     }
+`
+const FillerBox = styled.div`
+    height: 10%;
+    width: 100%;
 `
 const Navcell = styled.div`
     color: var(--resColor);
@@ -58,6 +63,7 @@ export const Navbar = (props) => {
                 </div>
             </NavbarWrapper>
             <Modal handleMove={handlePage} active={modal} handleClose={handleClose}/>
+            <FillerBox />
         </>
     )
 }

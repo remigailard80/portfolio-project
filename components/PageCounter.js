@@ -17,8 +17,8 @@ const Wrapper = styled.div`
     }
 `
 const Button = styled.div`
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-color: black;
     color: white;
     border-top-left-radius: 5px;
@@ -33,19 +33,27 @@ const Button = styled.div`
         animation: fadein 1s;
     }
 `
+const Filler = styled.div`
+    height: 100px;
+    @media (min-width: 0px) and (max-width: 575.99px) {
+        height: 50px;
+    }
+`
 export const PageCounter = (props) => {
     return (
-        <Wrapper>
-            <div class="text_container">
-                <p> All Right Reserved. 2021 </p>
-                <p> remigailard80@naver.com </p>
-            </div>
-            <Button>
-                <h2>
-                    {props.page + 1}
-                </h2>
-            </Button>
-        </Wrapper>
+        <>
+            <Wrapper>
+                <div class="text_container">
+                    <p> All Right Reserved. 2021 </p>
+                    <p> remigailard80@naver.com </p>
+                </div>
+                <Button>
+                    <h2>
+                        {props.page + 1}
+                    </h2>
+                </Button>
+            </Wrapper>
+        </>
     )
 }
 

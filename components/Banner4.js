@@ -9,10 +9,11 @@ const js = '/images/logo/JS.svg';
 
 const Wrapper = styled.div`
     width: 100%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     animation: fadein 1s;
+    padding-bottom: 100px;
 `
 const SkillContainer = styled.div`
     display: inline-flex;

@@ -4,13 +4,15 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 const Container = styled.div`
     width: 80%;
     height: ${props => props.height ? props.height : '60%'};
     max-width: 1200px;
     display: inline-flex;
-    margin: auto;
     @media (min-width: 0px) and (max-width: 767.99px) {
         max-width: 720px;
     }

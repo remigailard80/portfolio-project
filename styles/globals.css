@@ -46,9 +46,11 @@
 }
 :root[color-theme='dark'] {
   --resColor: white;
+  --navColor: rgba(152,0,0,1);;
 }
 :root[color-theme='light'] {
   --resColor: black;
+  --navColor: white
 }
 html {
   font-size: 14px;

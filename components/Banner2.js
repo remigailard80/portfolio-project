@@ -9,46 +9,52 @@ const Wrapper = styled.div`
     flex-direction: row;
     .side_container {
         box-sizing: border-box;
-        padding-top: 5vh;
+        padding-top: 8vh;
         padding-right: 3vw;
         .strong {
             color: rgba(152,0,0,1);
         }
     }
-    .title {
+    .text_wrapper {
         display: flex;
-        align-items: flex-end;
         justify-content: center;
-        animation: fadein 1s;
-        h2 {
-            font-weight: 500;
-        }
-        .strong {
-            font-weight: bold;
-        }
-    }
-    .exp_grid {
-        margin-top: 10vh;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(auto, 1fr));
-        grid-gap: 20px;
-        @media (min-width: 0px) and (max-width: 767.99px) {
-            margin-top: 5vh;
-        }
-        section {
-            height: auto;
-            min-height: 10vh;
-            .sub_title {
-                margin-bottom: 5px;
+        align-items: center;
+        flex-direction: column;
+        .title {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            animation: fadein 1s;
+            h2 {
+                font-weight: 500;
             }
-            > p {
-                box-sizing: border-box;
-                width: 85%;
-                word-break: keep-all;
-                font-size: 1vw;
-                @media (min-width: 0px) and (max-width: 767.99px) {
-                    font-size: 0.5vw;
-                    word-break: initial;
+            .strong {
+                font-weight: bold;
+            }
+        }
+        .exp_grid {
+            margin-top: 10vh;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(auto, 1fr));
+            grid-gap: 20px;
+            @media (min-width: 0px) and (max-width: 767.99px) {
+                margin-top: 5vh;
+            }
+            section {
+                height: auto;
+                min-height: 10vh;
+                .sub_title {
+                    margin-bottom: 5px;
+                }
+                > p {
+                    box-sizing: border-box;
+                    width: 85%;
+                    word-break: keep-all;
+                    font-size: 1vw;
+                    @media (min-width: 0px) and (max-width: 767.99px) {
+                        font-size: 0.5vw;
+                        word-break: initial;
+                    }
                 }
             }
         }
@@ -69,7 +75,7 @@ export default function Banner2(props) {
                                 developer;
                             </h2>
                         </div>
-                        <div>
+                        <div class="text_wrapper">
                             <div class="title">
                                 <h2> 안녕하세요. <span class="strong">React.JS, Javascript </span> 개발자 김민석입니다. </h2>
                             </div>

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Card = styled.div`
     min-height: 80px;
+    height: 100%;
     border-radius: 6px;
     background-color: white;
     box-shadow: 0 4px 10px 0 rgb(189 208 223 / 25%);

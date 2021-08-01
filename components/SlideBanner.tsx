@@ -13,14 +13,16 @@ const Banner = styled.div`
 ` 
 export default function SliderBanner({backgroundColor, direction, move, id, page, theme, innerRef, children}: SliderBannerProps) {
     return (
-        <Banner
-            backgroundColor={backgroundColor}
-            page={page}
-            className="SliderBanner"
-            theme={theme}
-            ref={innerRef}
-        >
-            {children}
-        </Banner>
+        <>
+            <Banner
+                backgroundColor={backgroundColor}
+                page={page}
+                className="SliderBanner"
+                theme={theme}
+                ref={innerRef}
+            >
+                {children}
+            </Banner>
+        </>
     )
 } 

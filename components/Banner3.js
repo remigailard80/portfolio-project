@@ -25,10 +25,11 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     color: var(--resColor);
+    overflow: scroll;
 `
 const Item = styled.section`
     width: 100%;
-    height: 100%;
+    height: fit-content;
     box-sizing: border-box;
     padding: 2% 2%;
     animation: fadein 2s;
@@ -73,7 +74,7 @@ const Item = styled.section`
             grid-template-columns: repeat(5, minmax(50px, 1fr));
             grid-gap: 5px;
             @media (min-width: 0px) and (max-width: 575.99px) {
-                grid-template-columns: repeat(2, minmax(40px, 1fr));
+                grid-template-columns: repeat(3, minmax(30px, 1fr));
             }
             @media (min-width: 576px) and (max-width: 767.99px) {
                 grid-template-columns: repeat(3, minmax(40px, 1fr));
@@ -87,7 +88,7 @@ const Item = styled.section`
         width: 100%;
         height: fit-content;
         box-sizing: border-box;
-        padding: 30px 15px;
+        padding: 3vh 1.5vh;
         border-bottom: 1px solid white;
         word-break: keep-all;
         > p {

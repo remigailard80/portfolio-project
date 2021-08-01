@@ -2,7 +2,6 @@ import SliderBanner from 'components/SlideBanner';
 import { useEffect, useState, useRef } from 'react';
 import PageButton from 'components/PageButton';
 import PageCounter from 'components/PageCounter';
-import Modal from 'components/Modal';
 import Navbar from 'components/Navbar';
 import Banner1 from 'components/Banner1';
 import Banner2 from 'components/Banner2';
