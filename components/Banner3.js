@@ -105,6 +105,7 @@ const Item = styled.section`
 export default function Banner3(props) {
     const Expdata = [
         {
+            'id': 0,
             'title': '(주) 볼트앤너트',
             'date': '2020.03 ~ 2021.03',
             'desc': '스타트업 (주) 볼트앤너트에서 1년 간 개발 팀장을 맡아 하였습니다. 처음 3개월은 Django 기반의 백엔드 관리, \
@@ -117,6 +118,7 @@ export default function Banner3(props) {
             'tags': [[react, 'react'], [js,'js'], [nextjs, 'next.JS'], [html,'html'], [css,'css'], [aws, 'aws'], [django, 'django'], [postgresql, 'postgres'], [github, 'github']]
         },
         {
+            'id': 1,
             'title': '개인 SNS 컨셉 사이트 제작',
             'date': '2021.03 ~',
             'desc': '스타트업에서 퇴사 후 개발 실력을 기르기 위해 수행한 개인 프로젝트입니다. (주) 볼트앤너트에서는 상태 관리 툴로 Mobx를 사용하였으나, \
@@ -130,6 +132,7 @@ export default function Banner3(props) {
             'tags': [[react, 'react'], [redux,'redux'], [js,'js'], [html,'html'], [css,'css'], [aws, 'aws'], [django, 'django'], [github, 'github']]
         },
         {
+            'id': 2,
             'title': '고려대학교 웹개발 동아리 Devkor 해커톤 사이트 프로젝트',
             'date': '2021.06 ~',
             'desc': '혼자 개발하게 되면 반드시 실력을 향상시키는 데 한계가 올 수밖에 없습니다. 아무리 잘 하고, 성실한 개발자일지라도\
@@ -151,16 +154,16 @@ export default function Banner3(props) {
                 <Wrapper>
                     <h1> Experiences </h1>
                     <Slider>
-                        {Expdata.map(item => {
+                        {Expdata.map((item, idx) => {
                             return (
                                 <>
-                                    <Item>
+                                    <Item key={item.id}>
                                         <div className="header">
                                             <div className="left_container">
                                                 <h2> {item.title} </h2>
                                                 <h3> {item.date} </h3> 
                                                 <div className="stack_container">
-                                                    {item.tags.map((item, idx) => <StackCard image={item[0]} name={item[1]} />)}
+                                                    {item.tags.map((item, idx) => <StackCard key={idx} image={item[0]} name={item[1]} />)}
                                                 </div>
                                             </div>
                                             <div className="right_container">

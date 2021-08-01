@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import SliderBannerProps from 'interfaces/Slider';
 
 const Banner = styled.div`
     width: 100%;
@@ -17,7 +16,7 @@ export default function SliderBanner({backgroundColor, page, theme, innerRef, ch
             <Banner
                 backgroundColor={backgroundColor}
                 page={page}
-                classNameName="SliderBanner"
+                className="SliderBanner"
                 theme={theme}
                 ref={innerRef}
             >

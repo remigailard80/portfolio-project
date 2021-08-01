@@ -19,9 +19,11 @@ export default function HomeContainer() {
 
     useEffect(() => {
         let all = document.getElementsByClassName('SliderBanner');
+
         setFullpage(document.getElementsByClassName('SliderBanner').length);
-        document.documentElement.setAttribute('color-theme', 'dark');
         setPageList(all);
+
+        document.documentElement.setAttribute('color-theme', 'dark');
     }, [])
 
     const buttonLoading = () => {
@@ -89,7 +91,6 @@ export default function HomeContainer() {
         if (targetPage > page) {
             targetPages.forEach(i => {
                 const self = pageList[i];
-                console.log(self.style);
                 self.style.transform = 'translate3d(-100%, 0px, 0px)';
             })
         }

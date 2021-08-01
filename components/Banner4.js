@@ -28,7 +28,6 @@ const SkillContainer = styled.div`
     }
     .right_container {
         width: 50%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         animation: fadeinMid 1.5s;
