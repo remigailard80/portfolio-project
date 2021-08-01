@@ -3,9 +3,9 @@ import BannerTemplate from 'components/BannerTemplate';
 import Slider from 'components/Slider';
 import StackCard from 'components/StackCard';
 
-const BNN = '/images/components/Banner3/BNN.png';
-const BLOG = '/images/components/Banner3/blog.png';
-const DEFAULT = '/images/components/Banner3/alertImg.jpg';
+const BNN = '/images/Components/Banner3/BNN.png';
+const BLOG = '/images/Components/Banner3/blog.png';
+const DEFAULT = '/images/Components/Banner3/alertImg.jpg';
 
 // stacks
 const aws = '/images/logo/AWS.svg';
