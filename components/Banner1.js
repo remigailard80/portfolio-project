@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import StackCard from 'components/StackCard';
+import { useEffect, useState } from 'react';
 
 const nyang = '/images/nyang.png';
 // stacks
@@ -21,7 +22,9 @@ const Wrapper = styled.div`
 `
 const Container = styled.div`
     width: 80%;
+    height: 50%;
     max-width: 1200px;
+    display: inline-flex;
     margin: auto;
     @media (min-width: 0px) and (max-width: 767.99px) {
         max-width: 720px;
@@ -33,8 +36,10 @@ const Container = styled.div`
         max-width: 980px;
     }
     > section {
-        width: 50%;
+        width: 60%;
         margin-bottom: 10px;
+        box-sizing: border-box;
+        padding-left: 30px;
         > h1 {
             animation: fadein 3s;
         }
@@ -53,6 +58,7 @@ const StackContainer = styled.div`
     flex-direction: column;
     box-sizing: border-box;
     padding: 15px 0px;
+    margin-top: 30px;
     .title {
         font-weight: bold;
         font-size: 2vw;
@@ -61,50 +67,120 @@ const StackContainer = styled.div`
     .stack_wrapper {
         display: grid;
         width: fit-content;
-        grid-template-columns: repeat(4, minmax(auto, 25%));
+        grid-template-columns: repeat(4, minmax(auto, 100%));
         grid-gap: 10px;
-        @media (min-width: 0px) and (max-width: 768px) {
-            grid-template-columns: repeat(3, minmax(auto, 33.333%));
+        @media (min-width: 0px) and (max-width: 575.99px) {
+            grid-template-columns: repeat(2, minmax(40px, 100%));
+        }
+        @media (min-width: 576px) and (max-width: 767.99px) {
+            grid-template-columns: repeat(3, minmax(60px, 100%));
+        }
+    }
+    > h3 {
+        word-break: keep-all;
+        line-height: 2;
+    }
+`
+const HistoryWrapper = styled.div`
+    display: inline-flex;
+    @media (min-width: 0px) and (max-width: 575.99px) {
+        display: flex;
+        flex-direction: column;
+    }
+`
+const HistoryContainer = styled.ul`
+    margin: 0;
+    margin-top: 2vw;
+    padding: 0;
+    list-style: none;
+    margin-right: 3vw;
+    overflow: hidden;
+    li {
+        font-size: 2vw;
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        cursor: pointer;
+        color: #999;
+        :hover {
+            transform: translateX(-10px);
+            color: white;
+            ::before {
+                transition: 0.5s;
+                background-color: white;
+                width: 3vw;
+                height: 1px;
+                margin-right: 10px;
+                content: ""
+            }
+        }
+        ::before {
+            background-color: #999;
+            width: 3vw;
+            height: 1px;
+            margin-right: 10px;
+            content: ""
         }
     }
 `
 const ImageContainer = styled.div`
     background-image: url(${props => props.backgroundImage});
-    height: 100%;
-    position: absolute;
-    width: 40%;
-    background-size: contain;
+    width: 50%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     right: 10%;
+    top: 20%;
     animation: fadein 3s;
+    --opacityTarget: 0.5;
+    opacity: 0.5;
 `
-export default function Banner1() {
-    let front_stacks = [html, css, js, react, redux];
-    let back_stacks = [aws,django,mysql,postgresql];
+export default function Banner1(props) {
+    let [mode, setMode] = useState(props.theme);
+    let pageJump = props.handleMove;
+
+    useEffect(() => {
+        setMode(props.theme);
+    },[]);
     
-    return (
-        <Wrapper>
-            <Container>
-                <section>
-                    <h1> 프론트엔드 개발자 </h1>
-                    <h2> <span class="line"> 김민석 </span> 입니다. </h2>
-                    <StackContainer>
-                        <p class="title"> FrontEnd </p>
-                        <div class="stack_wrapper">
-                            <StackCard image={react} name={"React"}/>
-                            <StackCard image={html} name={"HTML"}/>
-                            <StackCard image={css} name={"CSS"}/>
-                            <StackCard image={js} name={"Java Script"} />
-                            <StackCard image={redux} name={"Redux"}/>
-                        </div>
-                    </StackContainer>
-                    <StackContainer>
-                        <p class="title"> BackEnd </p>
-                    </StackContainer>
-                </section>
-            </Container>
-            <ImageContainer backgroundImage={nyang} />
-        </Wrapper>
-    )
+    if (props.active) {
+        try {
+            document.documentElement.setAttribute('color-theme', props.theme);
+        } catch {
+            // ha...
+        }
+        return (
+            <Wrapper>
+                <Container>
+                    <section>
+                        <h1> FrontEnd Developer. </h1>
+                        <h2> <span class="line"> 김민석 </span> 입니다. </h2>
+                        <StackContainer style={{animation: 'fadeinMid 3s'}}>
+                            <h3> 
+                                2020년 3월, 한 스타트업의 영업 인턴으로 시작하여, <br/>
+                                프론트엔드 개발자까지. <br/>
+                            </h3>
+                            <HistoryWrapper>
+                                <HistoryContainer>
+                                    {/* page 1 */}
+                                    <li onClick={(e) => pageJump(1)}> About Me </li>
+                                    {/* page 2 */}
+                                    <li onClick={(e) => pageJump(2)}> Experience </li>
+                                </HistoryContainer>
+                                <HistoryContainer>
+                                    {/* page3 */}
+                                    <li onClick={(e) => pageJump(3)}> Skills </li>
+                                    {/* page4 */}
+                                    <li onClick={(e) => pageJump(4)}> Info </li>
+                                </HistoryContainer>
+                            </HistoryWrapper>
+                        </StackContainer>
+                    </section>
+                    <ImageContainer backgroundImage={nyang} />
+                </Container>
+            </Wrapper>
+        )
+    } else {
+        return null;
+    }
 } 
