@@ -127,6 +127,9 @@ const ImageContainer = styled.div`
     animation: fadein 3s;
     --opacityTarget: 0.5;
     opacity: 0.5;
+    @media(min-width: 0px) and (max-width: 575.99px) {
+        max-height: 35vh;
+    }
 `
 export default function Banner1(props) {
     let [mode, setMode] = useState(props.theme);

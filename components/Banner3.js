@@ -38,6 +38,14 @@ const Item = styled.section`
         height: 80%;
         display: inline-flex;
         justify-content: space-between;
+        @media(min-width: 0px) and (max-width: 1199.98px) {
+            height: 50%;
+            .right_container {
+                a > img {
+                    object-fit: initial !important;
+                }
+            }
+        }
         .left_container {
             width: 45%;
             h2 {
@@ -58,7 +66,7 @@ const Item = styled.section`
                     width: 100%;
                     height: 100%;
                     border-radius: 10px;
-                    object-fit: cover;
+                    object-fit: fill;
                     transition: 0.5s;
                     :hover {
                         transform: scale(1.02);

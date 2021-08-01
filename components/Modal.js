@@ -8,7 +8,7 @@ const ModalFadeIn = keyframes`
         width: 0%;
     }
     100% {
-        width: 25%;
+        width: 35%;
     }
 `
 const ItemFadeIn = keyframes`
@@ -26,7 +26,7 @@ const ItemFadeIn = keyframes`
     }
 `
 const ModalWrapper = styled.div`
-    width: 25%;
+    width: 35%;
     height: 100vh;
     position: fixed;
     right: 0;
