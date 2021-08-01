@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import StackCard from 'components/StackCard';
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 const nyang = '/images/nyang.png';
 
@@ -21,6 +22,14 @@ const Container = styled.div`
     display: inline-flex;
     @media (min-width: 0px) and (max-width: 767.99px) {
         max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        min-height: 60%;
+        > section {
+            width: 100% !important;
+            margin-top: 2vw;
+            padding: 0 !important;
+        }
     }
     @media (min-width: 768px) and (max-width: 1023.99px) {
         max-width: 900px;
@@ -51,7 +60,7 @@ const StackContainer = styled.div`
     flex-direction: column;
     box-sizing: border-box;
     padding: 15px 0px;
-    margin-top: 30px;
+    margin-top: 3vw;
     .title {
         font-weight: bold;
         font-size: 2vw;
@@ -127,13 +136,19 @@ const ImageContainer = styled.div`
     animation: fadein 3s;
     --opacityTarget: 0.5;
     opacity: 0.5;
-    @media(min-width: 0px) and (max-width: 575.99px) {
-        max-height: 35vh;
+    border-radius: 10px;
+    @media (min-width: 0px) and (max-width: 767.99px) {
+        width: 100%;
+        height: 100%;
     }
 `
 export default function Banner1(props) {
     let [mode, setMode] = useState(props.theme);
     let pageJump = props.handleMove;
+
+    const isMobile = useMediaQuery({
+        query: '(max-width: 767.99px)',
+    });
 
     useEffect(() => {
         setMode(props.theme);
@@ -145,38 +160,71 @@ export default function Banner1(props) {
         } catch {
             // ha...
         }
-        return (
-            <Wrapper>
-                <Container>
-                    <section>
-                        <h1> FrontEnd Developer; </h1>
-                        <h2> <span className="line"> 김민석 </span> 입니다. </h2>
-                        <StackContainer style={{animation: 'fadeinMid 3s'}}>
-                            <h3> 
-                                2020년 3월, 한 스타트업의 영업 인턴으로 시작하여, <br/>
-                                프론트엔드 개발자까지. <br/>
-                            </h3>
-                            <HistoryWrapper>
-                                <HistoryContainer>
-                                    {/* page 1 */}
-                                    <li onClick={(e) => pageJump(1)}> About Me </li>
-                                    {/* page 2 */}
-                                    <li onClick={(e) => pageJump(2)}> Experience </li>
-                                </HistoryContainer>
-                                <HistoryContainer>
-                                    {/* page3 */}
-                                    <li onClick={(e) => pageJump(3)}> Skills </li>
-                                    {/* page4 */}
-                                    <li onClick={(e) => pageJump(4)}> Info </li>
-                                </HistoryContainer>
-                            </HistoryWrapper>
-                        </StackContainer>
-                    </section>
-                    <ImageContainer backgroundImage={nyang} />
-                </Container>
-            </Wrapper>
-        )
-    } else {
+        if (!isMobile) {
+            return (
+                    <Wrapper>
+                        <Container>
+                            <section>
+                                <h1> FrontEnd Developer; </h1>
+                                <h2> <span className="line"> 김민석 </span> 입니다. </h2>
+                                <StackContainer style={{animation: 'fadeinMid 3s'}}>
+                                    <h3> 
+                                        2020년 3월, 한 스타트업의 영업 인턴으로 시작하여, <br/>
+                                        프론트엔드 개발자까지. <br/>
+                                    </h3>
+                                    <HistoryWrapper>
+                                        <HistoryContainer>
+                                            {/* page 1 */}
+                                            <li onClick={(e) => pageJump(1)}> About Me </li>
+                                            {/* page 2 */}
+                                            <li onClick={(e) => pageJump(2)}> Experience </li>
+                                        </HistoryContainer>
+                                        <HistoryContainer>
+                                            {/* page3 */}
+                                            <li onClick={(e) => pageJump(3)}> Skills </li>
+                                            {/* page4 */}
+                                            <li onClick={(e) => pageJump(4)}> Info </li>
+                                        </HistoryContainer>
+                                    </HistoryWrapper>
+                                </StackContainer>
+                            </section>
+                            <ImageContainer backgroundImage={nyang} />
+                        </Container>
+                    </Wrapper>
+                )
+            } else {
+                return (
+                    <Wrapper>
+                        <Container>
+                            <ImageContainer backgroundImage={nyang} />
+                            <section>
+                                <h1> FrontEnd Developer; </h1>
+                                <h2> <span className="line"> 김민석 </span> 입니다. </h2>
+                                <StackContainer style={{animation: 'fadeinMid 3s'}}>
+                                    <h3> 
+                                        2020년 3월, 한 스타트업의 영업 인턴으로 시작하여, <br/>
+                                        프론트엔드 개발자까지. <br/>
+                                    </h3>
+                                    <HistoryWrapper>
+                                        <HistoryContainer>
+                                            {/* page 1 */}
+                                            <li onClick={(e) => pageJump(1)}> About Me </li>
+                                            {/* page 2 */}
+                                            <li onClick={(e) => pageJump(2)}> Experience </li>
+                                        </HistoryContainer>
+                                        <HistoryContainer>
+                                            {/* page3 */}
+                                            <li onClick={(e) => pageJump(3)}> Skills </li>
+                                            {/* page4 */}
+                                            <li onClick={(e) => pageJump(4)}> Info </li>
+                                        </HistoryContainer>
+                                    </HistoryWrapper>
+                                </StackContainer>
+                            </section>
+                        </Container>
+                    </Wrapper>
+                );
+            }
+        }
         return null;
-    }
 } 
