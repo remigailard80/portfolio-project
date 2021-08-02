@@ -82,6 +82,11 @@ const SkillContainer = styled.div`
                 font-size: 0.7vw;
             }
         }
+        .stack_box {
+            .item {
+                margin-bottom: 2vh;
+            }
+        }
     }
 `
 const ImageWrapper = styled.div`
@@ -133,10 +138,8 @@ export default function Banner4(props) {
                         <div className="left_container">
                             <ImageWrapper>
                                 <img src={nyang} alt="profile_goyang"/>
-                                <SubImage className="sub_image" src={js} top={'30%'} left={'20%'} />
-                                <SubImage className="sub_image" src={html} top={'60%'} left={'30%'} />
-                                <SubImage className="sub_image" src={react} top={'30%'} right={'20%'} />
-                                <SubImage className="sub_image" src={github} top={'60%'} right={'30%'} />
+                                <SubImage className="sub_image" src={js} top={'35%'} left={'35%'} />
+                                <SubImage className="sub_image" src={react} top={'37%'} right={'30%'} />
                             </ImageWrapper>
                         </div>
                         <div className="right_container">
