@@ -28,6 +28,12 @@ const Container = styled.div`
             width: 100% !important;
             margin-top: 2vw;
             padding: 0 !important;
+            > h1 {
+                font-size: 6vw;
+            }
+            > h2 {
+                font-size: 4vw;
+            }
         }
     }
     @media (min-width: 768px) and (max-width: 1023.99px) {
@@ -81,6 +87,12 @@ const StackContainer = styled.div`
         word-break: keep-all;
         line-height: 2;
     }
+    @media (min-width: 0px) and (max-width: 575.99px) {
+        padding: 0;
+        > h3 {
+            font-size: 3vw;
+        }
+    }
 `
 const HistoryWrapper = styled.div`
     display: inline-flex;
@@ -121,6 +133,9 @@ const HistoryContainer = styled.ul`
             height: 1px;
             margin-right: 10px;
             content: ""
+        }
+        @media (min-width: 0px) and (max-width: 575.99px) {
+            font-size: 5vw;
         }
     }
 `
