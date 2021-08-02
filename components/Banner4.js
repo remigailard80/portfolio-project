@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import BannerTemplate from './BannerTemplate';
 
-const nyang = '/images/Components/Banner4/nyang.png';
+const nyang = '/images/Components/Banner4/profile.jpg';
 const react = '/images/logo/React.svg';
 const github = '/images/logo/GITHUB.svg';
 const html = '/images/logo/HTML.svg';
@@ -9,11 +9,14 @@ const js = '/images/logo/JS.svg';
 
 const Wrapper = styled.div`
     width: 100%;
-    height: fit-content;
+    height: 100%;
     display: flex;
     flex-direction: column;
     animation: fadein 1s;
     padding-bottom: 100px;
+    @media (min-width: 0px) and (max-width: 767.99px) {
+        padding-bottom: 0px;
+    }
 `
 const SkillContainer = styled.div`
     display: inline-flex;
@@ -61,12 +64,14 @@ const SkillContainer = styled.div`
         flex-direction: column;
         width: 100%;
         height: 100%;
+        justify-content: initial;
         .left_container {
             width: 100%;
+            height: 50%;
         }
         .right_container {
             width: 100%;
-            margin-top: 2vw;
+            margin-top: 3vw;
             animation: fadein 2s;
             h2 {
                 word-break: keep-all;
@@ -88,6 +93,9 @@ const ImageWrapper = styled.div`
         width: 100%;
         height: 100%;
         border-radius: 10px;
+    }
+    @media (min-width: 0px) and (max-width: 767.99px) {
+        height: 100%;
     }
 `
 const SubImage = styled.img`
@@ -124,7 +132,7 @@ export default function Banner4(props) {
                     <SkillContainer>
                         <div className="left_container">
                             <ImageWrapper>
-                                <img src={nyang} />
+                                <img src={nyang} alt="profile_goyang"/>
                                 <SubImage className="sub_image" src={js} top={'30%'} left={'20%'} />
                                 <SubImage className="sub_image" src={html} top={'60%'} left={'30%'} />
                                 <SubImage className="sub_image" src={react} top={'30%'} right={'20%'} />

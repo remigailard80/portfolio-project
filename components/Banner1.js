@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import StackCard from 'components/StackCard';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-const nyang = '/images/nyang.png';
+const nyang = '/images/profile.jpg';
 
 const Wrapper = styled.div`
     color: white;
