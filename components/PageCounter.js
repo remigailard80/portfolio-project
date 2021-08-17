@@ -44,8 +44,8 @@ export const PageCounter = (props) => {
         <>
             <Wrapper>
                 <div className="text_container">
-                    <p> All Right Reserved. 2021 </p>
-                    <p> remigailard80@naver.com </p>
+                    <p> Referenced </p>
+                    <p> https://kijepark.com/ </p>
                 </div>
                 <Button>
                     <h2>
