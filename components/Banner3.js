@@ -151,7 +151,7 @@ export default function Banner3(props) {
             frontend는 React.js, Redux, Axios, JS, HTML, CSS 등의 기술 스택을 사용하였고, ESLINT, HUSKY 등의 코드 관리 기법을 배울 수 있었습니다. \
             2명의 프론트엔드 인원과, 2명의 백엔드 인원과 작업하였으며 해당 프로젝트에서는 소셜 로그인(OAuth) 학습 등의 수확도 있었습니다.',
             'thumbnail': DEVKOR,
-            'url': "https://github.com/DevKor-Team/devkor_hackathon_front.git",
+            'url': "https://www.devk.or.kr",
             'tags': [[react, 'react'], [redux,'redux'], [js,'js'], [html,'html'], [css,'css'], [github, 'github']]
         },
     ];
