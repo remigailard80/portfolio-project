@@ -5,7 +5,7 @@ import StackCard from 'components/StackCard';
 
 const BNN = '/images/Components/Banner3/BNN.png';
 const BLOG = '/images/Components/Banner3/blog.png';
-const DEFAULT = '/images/Components/Banner3/alertImg.jpg';
+const DEVKOR = '/images/Components/Banner3/devkor.png';
 
 // stacks
 const aws = '/images/logo/AWS.svg';
@@ -150,7 +150,7 @@ export default function Banner3(props) {
             commit 규칙 등의 협업에 있어 중요한 요소들에 관여하였고, 현재도 진행중으로 8월 중순 프로젝트를 끝마칠 예정입니다.\
             frontend는 React.js, Redux, Axios, JS, HTML, CSS 등의 기술 스택을 사용하였고, ESLINT, HUSKY 등의 코드 관리 기법을 배울 수 있었습니다. \
             2명의 프론트엔드 인원과, 2명의 백엔드 인원과 작업하였으며 해당 프로젝트에서는 소셜 로그인(OAuth) 학습 등의 수확도 있었습니다.',
-            'thumbnail': DEFAULT,
+            'thumbnail': DEVKOR,
             'url': "https://github.com/DevKor-Team/devkor_hackathon_front.git",
             'tags': [[react, 'react'], [redux,'redux'], [js,'js'], [html,'html'], [css,'css'], [github, 'github']]
         },
