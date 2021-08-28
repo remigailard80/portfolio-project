@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     color: var(--resColor);
-    overflow-y: scroll;
+    overflow-y: auto;
 `
 const Item = styled.section`
     width: 100%;
