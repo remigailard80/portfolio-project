@@ -99,16 +99,15 @@ export default function Banner2(props) {
                                 <section style={{animation: 'fadein 1s'}}>
                                     <h3 className="sub_title"> Agile 한 개발에 익숙합니다. </h3>
                                     <p> 
-                                        platform 스타트업 환경에서의 경험으로 Agile한 방법론의 중요성을 깊이 깨닫고 있는 개발자입니다. <br/>
+                                        platform 스타트업 환경에서의 경험으로 Agile한 방법론의 중요성을 깊이 깨닫고 있습니다. <br/>
                                         유연한 이슈트래킹과 소통 문화, 코드 리뷰를 중요시합니다.
                                     </p>
                                 </section>
                                 <section style={{animation: 'fadein 1.5s'}}>
-                                <h3 className="sub_title"> 협업을 생각합니다. </h3>
+                                <h3 className="sub_title"> 협업을 고려합니다. </h3>
                                     <p> 
                                         개발의 여러 Innovation은 협업상의 문제를 해결하는 과정에서 발생했습니다. <br/>
                                         원활한 협업 능력도 개발자의 하나의 능력이라고 생각합니다.
-                                        
                                     </p>
                                 </section>
                                 <section style={{animation: 'fadein 2s'}}>
@@ -121,8 +120,8 @@ export default function Banner2(props) {
                                 <section style={{animation: 'fadein 2.5s'}}>
                                     <h3 className="sub_title"> 소통의 가치를 중시합니다. </h3>
                                     <p> 
-                                        코드 뿐 아니라, 실생활에서의 커뮤니케이션도 개발자의 능력입니다. <br/>
-                                        오프라인에서 사람들과의 눈맞춤, 조율 또한 항상 중요시합니다. 
+                                        코드 뿐 아니라, 실생활에서의 커뮤니케이션도 개발자의 능력이라고 생각합니다. <br/>
+                                        오프라인에서 사람들과의 눈맞춤, 조율 또한 항상 중요시하겠습니다.
                                     </p>
                                 </section>
                             </div>
